@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 
 # 青果账密
 authKey = "KZ4VXNJP"
@@ -28,10 +29,15 @@ def get_proxy():
     # 账密模式
     proxyUrl = f"http://{authKey}:{password}@{proxyAddr}" # 青果代理的API
     proxies = {
-        "http://": proxyUrl,
-        "https://": proxyUrl,
+        "http": proxyUrl,
+        "https": proxyUrl,
     }
     return proxies
 
+start = time.time()
 for url in urls:
-    requests
+    proxies=get_proxy()
+    res = requests.get(url, proxies=proxies)
+    print(proxies['http'], res.status_code, url, time.strftime(r"%y-%m-%d %H:%M:%S"))
+end = time.time()
+print("总耗时：", end-start)
