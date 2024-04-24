@@ -3,8 +3,8 @@ import json
 import time
 
 # 青果账密
-authKey = "KZ4VXNJP"
-password = "4BE6158FBCC4"
+authKey = "xxxxxxx"
+password = "xxxxxxxx"
 
 
 urls = [
