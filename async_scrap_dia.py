@@ -7,8 +7,8 @@ import os
 from parsel import Selector
 
 # 青果账密
-authKey = "KZ4VXNJP"
-password = "4BE6158FBCC4"
+authKey = "xxxxxxxx"
+password = "xxxxxxxxx"
 
 
 root_path = os.path.dirname(__file__)
